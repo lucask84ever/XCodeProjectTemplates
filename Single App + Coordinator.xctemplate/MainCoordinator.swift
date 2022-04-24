@@ -10,5 +10,9 @@ class MainCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    func start() { }
+    func start() {
+        let vc = UIViewController()
+        vc.view.backgroundColor = .red
+        navigationController.pushViewController(vc, animated: false)
+    }
 }

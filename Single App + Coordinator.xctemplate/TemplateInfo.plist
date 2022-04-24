@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.lucask84ever.a</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.coreDataCocoaTouchApplication</string>
+		<string>com.apple.dt.unit.sceneLifecycleApplication</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Description</key>
+	<string>This template provides a starting point for an application that uses a single view. It provides a view controller to manage the view, and a storyboard or nib file that contains the view.</string>
+	<key>SortOrder</key>
+	<integer>1</integer>
+	<key>NameOfInitialFileForEditor</key>
+	<string>ContentView.swift</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>languageChoice</string>
+			<key>Units</key>
+			<dict>
+				<key>Swift</key>
+				<dict>
+					<key>RequiredOptions</key>
+					<dict>
+						<key>appLifecycle</key>
+						<string>Cocoa</string>
+					</dict>
+					<key>Nodes</key>
+					<array>
+						<string>AppDelegate.swift:comments</string>
+						<string>AppDelegate.swift:imports:importCocoa</string>
+						<string>AppDelegate.swift:UIApplicationMain</string>
+						<string>AppDelegate.swift:implementation(AppDelegate: UIResponder, UIApplicationDelegate)</string>
+						<string>AppDelegate.swift:implementation:properties:window</string>
+						<string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions(func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?\) -&gt; Bool)</string>
+						<string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+						<string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</string>
+						<string>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession(func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions\))</string>
+						<string>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:comments</string>
+						<string>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</string>
+						<string>Coordinators/MainCoordinator.swift</string>
+						<string>Coordinators/Coordinator.swift</string>
+						<string>ViewControllers/MainViewController.swift</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>Coordinators/Coordinator.swift</key>
+						<dict>
+							<key>Group</key>
+							<array>
+								<string>Coordinators</string>
+							</array>
+							<key>Path</key>
+							<string>Coordinator.swift</string>
+						</dict>
+						<key>Coordinators/MainCoordinator.swift</key>
+						<dict>
+							<key>Group</key>
+							<array>
+								<string>Coordinators</string>
+							</array>
+							<key>Path</key>
+							<string>MainCoordinator.swift</string>
+						</dict>
+						<key>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</key>
+						<string>
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let navigationController = UINavigationController()
+        let coordinator = MainCoordinator(navigationController: navigationController)
+						</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>userInterface</string>
+			<key>Name</key>
+			<string>Interface:</string>
+			<key>Description</key>
+			<string>The type of user interface.</string>
+			<key>Default</key>
+			<string>ViewCode</string>
+			<key>Type</key>
+			<string>popup</string>
+		</dict>
+	</array>
+	<key>Image</key>
+	<dict>
+		<key>BundleImageName</key>
+		<string>app</string>
+		<key>BundleIdentifier</key>
+		<string>com.apple.dt.IDEKit</string>
+	</dict>
+</dict>
+</plist>
