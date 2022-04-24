@@ -5,7 +5,7 @@
 	<key>Kind</key>
 	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
 	<key>Identifier</key>
-	<string>com.lucask84ever.a</string>
+	<string>com.lucask84ever.singleViewCoordinator</string>
 	<key>Ancestors</key>
 	<array>
 		<string>com.apple.dt.unit.coreDataCocoaTouchApplication</string>
@@ -48,7 +48,6 @@
 						<string>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</string>
 						<string>Coordinators/MainCoordinator.swift</string>
 						<string>Coordinators/Coordinator.swift</string>
-						<string>ViewControllers/MainViewController.swift</string>
 					</array>
 					<key>Definitions</key>
 					<dict>
@@ -72,9 +71,15 @@
 						</dict>
 						<key>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</key>
 						<string>
-        window = UIWindow(frame: UIScreen.main.bounds)
+        guard let windowScene = (scene as? UIWindowScene) else { return }
         let navigationController = UINavigationController()
         let coordinator = MainCoordinator(navigationController: navigationController)
+        
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
+        coordinator.start()
 						</string>
 					</dict>
 				</dict>
