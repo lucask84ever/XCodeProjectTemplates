@@ -11,8 +11,7 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .red
+        let vc = MainViewController()
         navigationController.pushViewController(vc, animated: false)
     }
 }

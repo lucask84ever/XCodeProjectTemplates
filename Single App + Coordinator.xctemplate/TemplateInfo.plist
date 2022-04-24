@@ -14,7 +14,7 @@
 	<key>Concrete</key>
 	<true/>
 	<key>Description</key>
-	<string>This template provides a starting point for an application that uses a single view. It provides a view controller to manage the view, and a storyboard or nib file that contains the view.</string>
+	<string>This template provides a starting point for an application that uses a single view with a main coordinator</string>
 	<key>SortOrder</key>
 	<integer>1</integer>
 	<key>NameOfInitialFileForEditor</key>
@@ -48,9 +48,19 @@
 						<string>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</string>
 						<string>Coordinators/MainCoordinator.swift</string>
 						<string>Coordinators/Coordinator.swift</string>
+						<string>ViewControllers/MainViewController.swift</string>
 					</array>
 					<key>Definitions</key>
 					<dict>
+						<key>ViewControllers/MainViewController.swift</key>
+						<dict>
+							<key>Group</key>
+							<array>
+								<string>ViewControllers</string>
+							</array>
+							<key>Path</key>
+							<string>MainViewController.swift</string>
+						</dict>
 						<key>Coordinators/Coordinator.swift</key>
 						<dict>
 							<key>Group</key>
@@ -71,15 +81,15 @@
 						</dict>
 						<key>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</key>
 						<string>
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        let navigationController = UINavigationController()
-        let coordinator = MainCoordinator(navigationController: navigationController)
-        
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-        
-        coordinator.start()
+	guard let windowScene = (scene as? UIWindowScene) else { return }
+	let navigationController = UINavigationController()
+	let coordinator = MainCoordinator(navigationController: navigationController)
+	
+	window = UIWindow(windowScene: windowScene)
+	window?.rootViewController = navigationController
+	window?.makeKeyAndVisible()
+	
+	coordinator.start()
 						</string>
 					</dict>
 				</dict>
