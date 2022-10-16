@@ -1,4 +1,10 @@
 # XCodeProjectTemplates
+## How to use?
++ Clone the repository
++ Select the template that you want to use and copy
++ Place the template at this location: /Users/{username}/Library/Developer/Xcode/Templates
++ Need to restart the Xcode.app
++ Then create a new Xcode project and scroll at the end of application template and select the downloaded Template
 
 ## Projects
 
